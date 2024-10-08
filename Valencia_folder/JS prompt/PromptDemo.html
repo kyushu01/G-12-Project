@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> The Prompt Method in Javascript</h1>
+    </header>
+
+    <main>
+        <form action="">
+            <input type="button" value="DISPLAY YOUR NAME" onclick="getName()">
+                <br>
+            <input type="button" value="DISPLAY SECTION" onclick="getSection()">
+        </form>
+    </main>
+    <script>
+
+    let name;
+    let Section;
+    function getName(){
+        name = window.prompt("Enter your name!");
+        alert("Your name is " + name);
+    }
+    function getSection(){
+        Section = window.prompt("Enter your section!");
+        alert("Your Section is " + Section);
+    }
+
+    </script>
+</body>
+</html>

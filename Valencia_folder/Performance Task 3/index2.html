@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computation of Grades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 60%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+        input[type="number"] {
+            width: 70px;
+        }
+        .section-title {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .compute-btn {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .result-display {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <table border="1">
+        <tr>
+            <th colspan="4">Computation of Grades</th>
+        </tr>
+
+        <!-- WRITTEN TASKS SECTION -->
+        <tr>
+            <td colspan="4">WRITTEN TASKS</td>
+        </tr>
+        <tr>
+            <td>Quiz 1</td>
+            <td><input type="number" id="txtQuiz1" value="50"></td>
+            <td>/</td>
+            <td><input type="number" id="qRange1" value="50"></td>
+        </tr>
+        <tr>
+            <td>Quiz 2</td>
+            <td><input type="number" id="txtQuiz2" value="50"></td>
+            <td>/</td>
+            <td><input type="number" id="qRange2" value="50"></td>
+        </tr>
+        <tr>
+            <td>Quiz 3</td>
+            <td><input type="number" id="txtQuiz3" value="50"></td>
+            <td>/</td>
+            <td><input type="number" id="qRange3" value="50"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button onclick="computeQuizzes()">Compute Quizzes</button>
+                <span id="txtTotalQuizzes">0.00</span>
+                <input type="checkbox" id="chkQuiz"> 20% 
+                <span id="quizResult">0.00</span>
+            </td>
+        </tr>
+
+        <!-- PERFORMANCE TASKS SECTION (Can be implemented similarly) -->
+        <tr>
+            <td colspan="4">PERFORMANCE TASKS</td>
+        </tr>
+        <tr>
+            <td>PT 1</td>
+            <td><input type="number" id="txtPT1" value="0"></td>
+            <td>/</td>
+            <td><input type="number" id="ptRange1" value="0"></td>
+        </tr>
+        <tr>
+            <td>PT 2</td>
+            <td><input type="number" id="txtPT2" value="0"></td>
+            <td>/</td>
+            <td><input type="number" id="ptRange2" value="0"></td>
+        </tr>
+        <tr>
+            <td>PT 3</td>
+            <td><input type="number" id="txtPT3" value="0"></td>
+            <td>/</td>
+            <td><input type="number" id="ptRange3" value="0"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button onclick="computePerformance()">Compute Performance Tasks</button>
+                <span id="txtTotalPerformance">0.00</span>
+                <input type="checkbox" id="chkPerformance"> 60%
+                <span id="performanceResult">0.00</span>
+            </td>
+        </tr>
+
+        <!-- PERIODICAL EXAM SECTION -->
+        <tr>
+            <td colspan="4">PERIODICAL EXAM</td>
+        </tr>
+        <tr>
+            <td>Periodical Exam 3</td>
+            <td><input type="number" id="txtExam" value="0"></td>
+            <td>/</td>
+            <td><input type="number" id="examRange" value="0"></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button onclick="computeExam()">Compute Exam</button>
+                <span id="txtTotalExam">0.00</span>
+                <input type="checkbox" id="chkExam"> 20%
+                <span id="examResult">0.00</span>
+            </td>
+        </tr>
+
+        <!-- FINAL GRADE SECTION -->
+        <tr>
+            <td>GRADE</td>
+            <td colspan="3">
+                <span id="finalGrade">0.00</span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<script>
+// Function to compute quiz scores
+function computeQuizzes() {
+    const q1 = parseInt(document.getElementById("txtQuiz1").value) || 0;
+    const q2 = parseInt(document.getElementById("txtQuiz2").value) || 0;
+    const q3 = parseInt(document.getElementById("txtQuiz3").value) || 0;
+
+    const rangeQ1 = parseInt(document.getElementById("qRange1").value) || 0;
+    const rangeQ2 = parseInt(document.getElementById("qRange2").value) || 0;
+    const rangeQ3 = parseInt(document.getElementById("qRange3").value) || 0;
+
+    let totalQuizzes;
+    if (rangeQ1 + rangeQ2 + rangeQ3 > 0) {
+        totalQuizzes = ((q1 + q2 + q3) / (rangeQ1 + rangeQ2 + rangeQ3)) * 100;
+    } else {
+        totalQuizzes = 0;
+    }
+
+    document.getElementById("txtTotalQuizzes").innerText = totalQuizzes.toFixed(2);
+
+    let quizResult;
+    if (document.getElementById("chkQuiz").checked) {
+        quizResult = (totalQuizzes * 0.20).toFixed(2);
+    } else {
+        quizResult = totalQuizzes.toFixed(2);
+    }
+
+    document.getElementById("quizResult").innerText = quizResult;
+}
+
+// Similar functions can be implemented for Performance Tasks and Exam
+function computePerformance() {
+    // Implement performance task logic with if-else
+}
+
+function computeExam() {
+    // Implement exam logic with if-else
+}
+
+// Event listener for quizzes checkbox
+document.getElementById("chkQuiz").addEventListener('change', computeQuizzes);
+</script>
+
+</body>
+</html>

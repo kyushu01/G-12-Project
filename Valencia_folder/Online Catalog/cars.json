@@ -1,0 +1,62 @@
+[
+  {
+      "name": "Tesla Model S",
+      "description": "A luxury all-electric sedan with impressive acceleration, a long driving range, and advanced autopilot features.",
+      "price": 89990,
+      "image": "Tesla_Model_S.jpg"
+  },
+  {
+      "name": "Ford Mustang",
+      "description": "A classic American muscle car known for its powerful V8 engine, sporty handling, and iconic design.",
+      "price": 55300,
+      "image": "Ford_Mustang.jpg"
+  },
+  {
+      "name": "Chevrolet Camaro",
+      "description": "A high-performance sports car with sharp handling, aggressive styling, and available V8 engine options.",
+      "price": 45000,
+      "image": "Chevrolet_Camaro.jpg"
+  },
+  {
+      "name": "BMW X5",
+      "description": "A luxury SUV offering a blend of sporty performance, refined interior, and advanced technology features.",
+      "price": 60700,
+      "image": "BMW_X5.jpg"
+  },
+  {
+      "name": "Mercedes-Benz C-Class",
+      "description": "A premium sedan with sleek design, cutting-edge technology, and a comfortable, high-quality interior.",
+      "price": 42500,
+      "image": "Mercedes_Benz_C_Class.jpg"
+  },
+  {
+      "name": "Audi A4",
+      "description": "A compact luxury sedan that combines style, performance, and technology for an enjoyable driving experience.",
+      "price": 41000,
+      "image": "Audi_A4.jpg"
+  },
+  {
+      "name": "Toyota Camry",
+      "description": "A reliable and fuel-efficient midsize sedan with a comfortable interior and a reputation for longevity.",
+      "price": 27500,
+      "image": "Toyota_Camry.jpg"
+  },
+  {
+      "name": "Honda Civic",
+      "description": "A popular compact car offering excellent fuel efficiency, reliable performance, and advanced safety features.",
+      "price": 24000,
+      "image": "Honda_Civic.jpg"
+  },
+  {
+      "name": "Jeep Wrangler",
+      "description": "A rugged off-road SUV with iconic styling, removable doors, and exceptional off-road capabilities.",
+      "price": 38500,
+      "image": "Jeep_Wrangler.jpg"
+  },
+  {
+      "name": "Hyundai Sonata",
+      "description": "A midsize sedan offering a comfortable ride, advanced safety features, and a sleek modern design.",
+      "price": 26800,
+      "image": "Hyundai_Sonata.jpg"
+  }
+]

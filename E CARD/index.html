@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christmas Greeting Card</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #E0F7FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+    }
+    .card {
+      background-color: #ADD8E6;
+      border: 3px solid #4682B4;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 25px;
+      width: 400px;
+      height: 600px;
+      position: relative;
+      overflow: hidden;
+    }
+    h2 {
+      font-size: 18px;
+      color: #003366;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 15px;
+      color: #002244;
+      line-height: 1.5;
+    }
+    .snowflake {
+      position: absolute;
+      color: white;
+      font-size: 20px;
+      animation: fall linear infinite;
+      opacity: 0;
+    }
+    @keyframes fall {
+      0% {
+        top: -10%;
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+      }
+      100% {
+        top: 110%;
+        opacity: 0;
+        transform: translateX(20px) rotate(360deg);
+      }
+    }
+    .snowflake:nth-child(1) {
+      left: 20%;
+      animation-duration: 6s;
+      animation-delay: 0s;
+    }
+    .snowflake:nth-child(2) {
+      left: 40%;
+      animation-duration: 7s;
+      animation-delay: 1s;
+    }
+    .snowflake:nth-child(3) {
+      left: 60%;
+      animation-duration: 5s;
+      animation-delay: 2s;
+    }
+    .snowflake:nth-child(4) {
+      left: 80%;
+      animation-duration: 6.5s;
+      animation-delay: 3s;
+    }
+    .snowflake:nth-child(5) {
+      left: 50%;
+      animation-duration: 8s;
+      animation-delay: 4s;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- Snowflakes inside the card -->
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❄</div>
+    <div class="snowflake">❆</div>
+
+    <!-- SVG Christmas Tree -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 150" width="150" height="200" style="margin: 20px auto; display: block;">
+      <!-- Star -->
+      <polygon points="50,5 55,20 70,20 58,30 63,45 50,35 37,45 42,30 30,20 45,20" fill="gold" />
+      <!-- Tree Layers (Proper Tapering) -->
+      <polygon points="50,35 30,60 70,60" fill="green" />
+      <polygon points="50,55 20,85 80,85" fill="green" />
+      <polygon points="50,80 10,120 90,120" fill="green" />
+      <!-- Ornaments -->
+      <circle cx="40" cy="45" r="3" fill="red" />
+      <circle cx="60" cy="70" r="3" fill="blue" />
+      <circle cx="50" cy="95" r="3" fill="yellow" />
+      <circle cx="30" cy="110" r="3" fill="purple" />
+      <!-- Trunk -->
+      <rect x="45" y="120" width="10" height="20" fill="brown" />
+    </svg>
+
+    <!-- Greeting Message -->
+    <h2>To My Amazing Parents,</h2>
+    <p>
+      Wishing you a Christmas filled with love, laughter, and cherished moments together.  
+      Thank you for your endless support and for being my greatest source of inspiration.  
+      May this holiday season bring you as much happiness as you bring into my life.  
+      <br><br>
+      With all my love,  
+      Your Son  
+    </p>
+    
+  </div>
+</body>
+</html>
